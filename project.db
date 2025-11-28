@@ -1,0 +1,14 @@
+import sqlite3 as sq
+conn=sq.connect('project.db')
+cursor=conn.cursor()
+table="""
+create table customer
+(
+cid integer primary key AutoIncrement,
+cname text not null,
+password text not null,
+pin integer not null,
+balance int not null
+)
+"""
+cursor.execute(table)
